@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: db_kioscoDL_dev
+    environment:
+      POSTGRES_USER: aledev      # Nombre de usuario de la base de datos
+      POSTGRES_PASSWORD: 12345678  # Contraseña de la base de datos
+      POSTGRES_DB: db_kioscoDL_dev        # Nombre de la base de datos inicial
+    ports:
+      - "5432:5432"  # Mapea el puerto 5432 del contenedor al puerto 5432 del host
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Persiste los datos en un volumen para mantenerlos incluso después de detener el contenedor
+
+volumes:
+  db_data:
