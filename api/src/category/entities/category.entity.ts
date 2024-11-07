@@ -9,7 +9,7 @@ export class Category {
     @Column({ type: 'varchar', nullable: false })
     img: string;
 
-    @Column({ type: 'varchar', nullable: false })
+    @Column({ type: 'varchar', nullable: false, unique: true })
     name_category: string;
 
     @Column({ type: 'varchar', nullable: false })
