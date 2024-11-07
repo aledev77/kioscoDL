@@ -7,7 +7,7 @@ export class Category {
     id_category: number;
     
     @Column({ type: 'varchar', nullable: false })
-    img: string;
+    img_category: string;
 
     @Column({ type: 'varchar', nullable: false, unique: true })
     name_category: string;
